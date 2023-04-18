@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textButton:{
-    fontSize: 16,
+    fontSize: 18,
     color: "#ffffff",
     fontWeight: "bold",
   },
