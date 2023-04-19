@@ -2,6 +2,7 @@ import React from "react";
 import { TouchableOpacity } from "react-native";
 import { Text, View, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { Link } from "expo-router";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
             end={{ x: 1, y: 1 }}
             style={styles.button}
           >
-            <Text style={styles.textButton}>Nuevo registro</Text>
+            <Link href="formularioregistro" style={styles.textButton}>Nuevo registro</Link>
           </LinearGradient>
         </TouchableOpacity>
 
