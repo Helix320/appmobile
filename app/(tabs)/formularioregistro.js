@@ -53,6 +53,7 @@ const App = () => {
     {key:'6', value:'Terraceria'},
   ]
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Text style={styles.titulo}>Nuevo registro</Text>
 
@@ -143,6 +144,7 @@ const App = () => {
         </TouchableOpacity>
       </View>
     </View>
+    </ScrollView>
   );
 };
 
