@@ -12,6 +12,12 @@ import { SelectList } from 'react-native-dropdown-select-list'
 
 const App = () => {
   const [selected, setSelected] = React.useState("");
+  const [fecha, setfecha] = React.useState("");
+  const [hora, sethora] = React.useState("");
+  const [fallecidos, setfallecidos] = React.useState("");
+  const [lesionados, setlesionados] = React.useState("");
+  const [sinlesion, setsinlesion] = React.useState("");
+
   
   const data1 = [
       {key:'0', value:'Seleccione una opcion'},
@@ -54,10 +60,14 @@ const App = () => {
       <TextInput
           placeholder={'Fecha del incidente'}
           style={styles.input}
+          onChangeText={(fecha) => setfecha(fecha)}
+          value = {fecha}
         />
       <TextInput
           placeholder={'Hora del incidente'}
           style={styles.input}
+          onChangeText={(hora) => sethora(hora)}
+          value = {hora}
         />
       </View>
         <Text style={styles.subtitulo}>Clasificacion del siniestro</Text>
@@ -70,13 +80,19 @@ const App = () => {
       <TextInput
           placeholder={'Numero de personas fallecidas'}
           style={styles.personas}
+          onChangeText={(fallecidos) => setfallecidos(fallecidos)}
+          value = {fallecidos}
         />
         <TextInput
           placeholder={'Numero de personas lesionadas'}
           style={styles.personas}
+          onChangeText={(lesionados) => setlesionados(lesionados)}
+          value = {lesionados}
         /><TextInput
         placeholder={'Numero de personas involucradas sin lesiones'}
         style={styles.personas}
+        onChangeText={(sinlesion) => setsinlesion(sinlesion)}
+        value = {sinlesion}
       />
       <Text style={styles.subtitulo}>Tipo de siniestro</Text>
         <SelectList 
