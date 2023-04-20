@@ -52,6 +52,8 @@ const formularioregistro = () => {
     {key:'5', value:'Asfalto'},
     {key:'6', value:'Terraceria'},
   ]
+
+
   return (
     <ScrollView>
     <View style={styles.container}>
@@ -134,13 +136,13 @@ const formularioregistro = () => {
             <Text style={styles.textButton}>Guardar registro (Terminar despues)</Text>
           </LinearGradient>
   </TouchableOpacity>*/}
-        const datos = "
-          "fecha": fecha,
-          "hora": hora,
-          "fallecidos": fallecidos,
-          "lesionados": lesionados,
-          "sinlesion": sinlesion,
-        "
+        const datos = ["
+          {"fecha"= fecha},
+          {"hora"= hora},
+          {"fallecidos" = fallecidos},
+          {"lesionados" = lesionados},
+          {"sinlesion" = sinlesion},
+        "]
         <Button color="black" onPress={()=> console.log+(datos)}>
          {/*<LinearGradient
             colors={["#5aff00", "#4c7a45"]}
