@@ -19,14 +19,14 @@ const App = () => {
   const [sinlesion, setsinlesion] = React.useState("");
 
   
-  const data1 = [
+  const clasificacion = [
       {key:'0', value:'Seleccione una opcion'},
       {key:'1', value:'Fatal (Incluye personas fallecidas)'},
       {key:'2', value:'No fatal (Personas lesionadas sin ningun fallecido)'},
       {key:'3', value:'Solo daños (No hay personas lesionadas ni fallecidas)'},
   ]
 
-  const data2 = [
+  const tipo = [
     {key:'0', value:'Seleccione una opcion'},
     {key:'1', value:'Colision con vehiculo automotor'},
     {key:'2', value:'Colision con peaton'},
@@ -43,7 +43,7 @@ const App = () => {
     {key:'13', value:'Otro'},
   ]
 
-  const data3 = [
+  const superficie = [
     {key:'0', value:'Seleccione una opcion'},
     {key:'1', value:'Empedrado'},
     {key:'2', value:'Huellas de rodamiento'},
@@ -74,7 +74,7 @@ const App = () => {
         <Text style={styles.subtitulo}>Clasificacion del siniestro</Text>
         <SelectList 
           setSelected={(val) => setSelected(val)} 
-          data={data1} 
+          data={clasificacion} 
           save="value"
         />
       <Text style={styles.subtitulo}> Ingresa: </Text>
@@ -98,14 +98,14 @@ const App = () => {
       <Text style={styles.subtitulo}>Tipo de siniestro</Text>
         <SelectList 
           setSelected={(val) => setSelected(val)} 
-          data={data2} 
+          data={tipo} 
           save="value"
         />
 
       <Text style={styles.subtitulo}>Superficie de rodamiento</Text>
         <SelectList 
           setSelected={(val) => setSelected(val)} 
-          data={data3} 
+          data={superficie} 
           save="value"
         />
 
@@ -121,7 +121,7 @@ const App = () => {
           </LinearGradient>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.lg}>
+       {/*<TouchableOpacity style={styles.lg}>
           <LinearGradient
             colors={["#2a2a2a", "#000000", "#2a2a2a"]}
             start={{ x: 0, y: 0 }}
@@ -130,8 +130,14 @@ const App = () => {
           >
             <Text style={styles.textButton}>Guardar registro (Terminar despues)</Text>
           </LinearGradient>
-        </TouchableOpacity>
-
+  </TouchableOpacity>*/}
+        const datos = "
+          "fecha": fecha,
+          "hora": hora,
+          "fallecidos": fallecidos,
+          "lesionados": lesionados,
+          "sinlesion": sinlesion,
+        "
         <TouchableOpacity style={styles.lg}>
           <LinearGradient
             colors={["#5aff00", "#4c7a45"]}
