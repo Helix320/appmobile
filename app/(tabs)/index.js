@@ -11,7 +11,7 @@ import icon from "../assets/caricon.png";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from "expo-router";
 
-const App = () => {
+const index = () => {
   const [userName, setUserName] = useState('');
   const [pwd, setpwd] = useState('');
 
@@ -108,4 +108,4 @@ const styles = StyleSheet.create({
   } 
 });
 
-export default App;
+export default index;

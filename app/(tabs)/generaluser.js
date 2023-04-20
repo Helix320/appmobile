@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Link } from "expo-router";
 
-const App = () => {
+const generaluser = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Bienvenido</Text>
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default generaluser;

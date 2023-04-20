@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { TouchableOpacity, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import {
   Text,
   View,
+  Button,
   StyleSheet,
   Image,
   TextInput,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { SelectList } from 'react-native-dropdown-select-list'
 
-const App = () => {
+const formularioregistro = () => {
   const [selected, setSelected] = React.useState("");
   const [fecha, setfecha] = React.useState("");
   const [hora, sethora] = React.useState("");
@@ -110,16 +110,19 @@ const App = () => {
         />
 
       <View style={styles.unafila}>
-      <TouchableOpacity style={styles.lg}>
-          <LinearGradient
+      <Button color="black">
+        {/*<LinearGradient
             colors={["#f2372e", "#430804"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.button}
-          >
+          > 
+          texto 
+          </LinearGradient>*/}
+          
             <Text style={styles.textButton}>Cancelar registro</Text>
-          </LinearGradient>
-        </TouchableOpacity>
+          
+        </Button>
 
        {/*<TouchableOpacity style={styles.lg}>
           <LinearGradient
@@ -138,16 +141,17 @@ const App = () => {
           "lesionados": lesionados,
           "sinlesion": sinlesion,
         "
-        <TouchableOpacity style={styles.lg}>
-          <LinearGradient
+        <Button color="black" onPress={()=> console.log+(datos)}>
+         {/*<LinearGradient
             colors={["#5aff00", "#4c7a45"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.button}
-          >
-            <Text style={styles.textButton}>Continuar</Text>
-          </LinearGradient>
-        </TouchableOpacity>
+          > 
+         texto 
+          </LinearGradient>*/}
+          <Text style={styles.textButton}>Continuar</Text>
+        </Button>
       </View>
     </View>
     </ScrollView>
@@ -201,11 +205,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     paddingStart: 20,
   },
-  lg: {
-    alignItems: "center",
-    width: 140,
-    marginTop: 60,
-  },
   button: {
     width: "80%",
     height: 50,
@@ -221,4 +220,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default formularioregistro;
