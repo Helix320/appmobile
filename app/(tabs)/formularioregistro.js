@@ -53,6 +53,15 @@ const formularioregistro = () => {
     {key:'6', value:'Terraceria'},
   ]
 
+  const handleSubmit= () => {
+    const datos = {
+          fecha: fecha,
+          hora: hora,
+          fallecidos: fallecidos,
+          lesionados: lesionados,
+          sinlesion: sinlesion
+        }
+  }
 
   return (
     <ScrollView>
@@ -136,14 +145,8 @@ const formularioregistro = () => {
             <Text style={styles.textButton}>Guardar registro (Terminar despues)</Text>
           </LinearGradient>
   </TouchableOpacity>*/}
-        const datos = ["
-          {"fecha"= fecha},
-          {"hora"= hora},
-          {"fallecidos" = fallecidos},
-          {"lesionados" = lesionados},
-          {"sinlesion" = sinlesion},
-        "]
-        <Button color="black" onPress={()=> console.log+(datos)}>
+        
+        <Button color="black" onPress={handleSubmit}>
          {/*<LinearGradient
             colors={["#5aff00", "#4c7a45"]}
             start={{ x: 0, y: 0 }}

@@ -5,7 +5,7 @@ var uploadIPFS = require( './upload-ipfs.js')
 var app= express()
 
 app.get('/', async (req, res) => {
-    res.sendFile(__dirname+'/prueba.html');
+    res.sendFile(__dirname+'/formularioregistro.js');
 });
 
 const PATH = 'uploads/';
